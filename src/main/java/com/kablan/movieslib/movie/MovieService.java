@@ -1,6 +1,6 @@
-package com.kablan.movieslib;
+package com.kablan.movieslib.movie;
 
-import org.bson.types.ObjectId;
+import com.kablan.movieslib.review.Review;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,12 +17,12 @@ public class MovieService {
         return movieRepository.findAll();
     }
 
-    public Optional<Movie> singleMovie(String imdbId) {
+    public Optional<Movie> singleMovieByImdbId(String imdbId) {
         return movieRepository.findMovieByImdbId(imdbId);
     }
 
     public List<Review> allMovieReviews(String imdbId) {
-        Optional<Movie> movieOptional = this.singleMovie(imdbId);
+        Optional<Movie> movieOptional = this.singleMovieByImdbId(imdbId);
 
         if (movieOptional.isEmpty()) {
             return Collections.emptyList();
@@ -30,6 +30,10 @@ public class MovieService {
 
         Movie movie = movieOptional.get();
         return movie.getReviewIds();
+    }
+
+    public Optional<Movie> singleMovieByTitle(String title) {
+        return movieRepository.findMovieByTitleContainsIgnoreCase(title);
     }
 
 }

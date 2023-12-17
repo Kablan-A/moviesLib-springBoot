@@ -1,5 +1,8 @@
-package com.kablan.movieslib;
+package com.kablan.movieslib.review;
 
+import com.kablan.movieslib.movie.Movie;
+import com.kablan.movieslib.review.Review;
+import com.kablan.movieslib.review.ReviewRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;

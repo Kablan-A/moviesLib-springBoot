@@ -1,4 +1,4 @@
-package com.kablan.movieslib;
+package com.kablan.movieslib.user;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,16 +7,14 @@ import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "review")
+@Document(collection = "users")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Review {
+public class User {
     @Id
     private ObjectId id;
-    private String body;
-
-    public Review(String body) {
-        this.body = body;
-    }
+    private String userType;
+    private String eMail;
+    private String password;
 }

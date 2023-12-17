@@ -1,5 +1,6 @@
-package com.kablan.movieslib;
+package com.kablan.movieslib.user;
 
+import com.kablan.movieslib.user.User;
 import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.repository.MongoRepository;
 

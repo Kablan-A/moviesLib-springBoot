@@ -1,5 +1,7 @@
-package com.kablan.movieslib;
+package com.kablan.movieslib.user;
 
+import com.kablan.movieslib.user.User;
+import com.kablan.movieslib.user.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

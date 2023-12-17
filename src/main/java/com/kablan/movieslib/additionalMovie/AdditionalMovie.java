@@ -1,5 +1,6 @@
-package com.kablan.movieslib;
+package com.kablan.movieslib.additionalMovie;
 
+import com.kablan.movieslib.review.Review;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,11 +11,11 @@ import org.springframework.data.mongodb.core.mapping.DocumentReference;
 
 import java.util.List;
 
-@Document(collection = "movies")
+@Document(collection = "additionalMovies")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Movie {
+public class AdditionalMovie {
     @Id
     private ObjectId id;
     private String imdbId;

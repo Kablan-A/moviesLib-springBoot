@@ -1,5 +1,7 @@
-package com.kablan.movieslib;
+package com.kablan.movieslib.additionalMovie;
 
+import com.kablan.movieslib.additionalMovie.AdditionalMovie;
+import com.kablan.movieslib.additionalMovie.AdditionalMovieProjection;
 import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;

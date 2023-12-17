@@ -1,4 +1,4 @@
-package com.kablan.movieslib;
+package com.kablan.movieslib.additionalMovie;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;

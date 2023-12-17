@@ -1,4 +1,4 @@
-package com.kablan.movieslib;
+package com.kablan.movieslib.additionalMovie;
 
 public interface AdditionalMovieProjection {
     String getImdbId();

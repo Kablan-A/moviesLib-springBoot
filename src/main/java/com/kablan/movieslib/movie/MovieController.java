@@ -1,6 +1,7 @@
-package com.kablan.movieslib;
+package com.kablan.movieslib.movie;
 
-import org.bson.types.ObjectId;
+import com.kablan.movieslib.additionalMovie.AdditionalMovie;
+import com.kablan.movieslib.review.Review;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,13 +23,18 @@ public class MovieController {
     }
 
     @GetMapping("/{imdbId}")
-    public ResponseEntity<Optional<Movie>> getSingleMovie(@PathVariable String imdbId) {
-        return new ResponseEntity<Optional<Movie>>(movieService.singleMovie(imdbId), HttpStatus.OK);
+    public ResponseEntity<Optional<Movie>> getSingleMovieByImdbId(@PathVariable String imdbId) {
+        return new ResponseEntity<Optional<Movie>>(movieService.singleMovieByImdbId(imdbId), HttpStatus.OK);
     }
 
     @GetMapping("/reviews/{imdbId}")
     public ResponseEntity<List<Review>> getAllReviewsForMovie(@PathVariable String imdbId) {
         return new ResponseEntity<List<Review>>(movieService.allMovieReviews(imdbId), HttpStatus.OK);
+    }
+
+    @GetMapping("/byTitle/{title}")
+    public ResponseEntity<Optional<Movie>> getSingleMovieByTitle(@PathVariable String title) {
+        return new ResponseEntity<Optional<Movie>>(movieService.singleMovieByTitle(title), HttpStatus.OK);
     }
 
 }
