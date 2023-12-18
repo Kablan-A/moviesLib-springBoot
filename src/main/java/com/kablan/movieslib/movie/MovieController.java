@@ -12,7 +12,7 @@ import java.util.Optional;
 
 //@CrossOrigin(origins = "http://localhost:3000")
 //@CrossOrigin(origins = "https://movies-lib-project.netlify.app")
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 @RequestMapping("/api/v1/movies")
 public class MovieController {
