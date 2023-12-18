@@ -8,7 +8,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Map;
 
 //@CrossOrigin(origins = "http://localhost:3000")
-@CrossOrigin(origins = "https://movies-lib-project.netlify.app")
+//@CrossOrigin(origins = "https://movies-lib-project.netlify.app")
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/api/v1/reviews")
 public class ReviewController {
