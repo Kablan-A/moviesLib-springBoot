@@ -13,7 +13,7 @@ public class WebConfig implements WebMvcConfigurer {
     public void addCorsMappings(CorsRegistry registry) {
 
         registry.addMapping("/api/**")
-                .allowedOrigins("https://movies-lib-project.netlify.app")
+                .allowedOrigins("https://movies-lib-trcx.onrender.com")
                 .allowedMethods("GET", "POST")
                 .allowedHeaders("header1", "header2", "header3")
                 .exposedHeaders("header1", "header2")
