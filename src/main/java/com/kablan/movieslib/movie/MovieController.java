@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 //@CrossOrigin(origins = "http://localhost:3000")
-@CrossOrigin
+@CrossOrigin(origins = "https://movies-lib-trcx.onrender.com")
 @RestController
 @RequestMapping("/api/v1/movies")
 public class MovieController {
