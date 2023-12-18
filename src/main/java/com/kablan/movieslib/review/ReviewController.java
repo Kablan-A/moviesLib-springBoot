@@ -9,7 +9,7 @@ import java.util.Map;
 
 //@CrossOrigin(origins = "http://localhost:3000")
 //@CrossOrigin(origins = "https://movies-lib-project.netlify.app")
-@CrossOrigin(origins = "*", allowedHeaders = "*")
+//@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 @RequestMapping("/api/v1/reviews")
 public class ReviewController {
